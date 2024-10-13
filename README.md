@@ -18,7 +18,7 @@
       message: ['', Validators.required],
     });
   } `
-* *ngIf: Conditional rendering of form.
+* ` *ngIf `: Conditional rendering of form.
 * `attr.aria-describedby`: Provide programmatic determination of error message.
 * `role="alert"`: alert screen reader about the error message.
 * `label for="id-lb"` and `id="id-lb" ` Providing label for form control.
