@@ -1,0 +1,42 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()"  role="form">
+    <h2 class="form-title">Accessible Form Validation</h2>
+  
+    <fieldset>
+      <legend>Contact Information</legend>
+  
+      <div>
+        <label for="name">Name</label>
+        <input id="name" formControlName="name" type="text" aria-required="true" 
+               [attr.aria-describedby]="form.get('name')?.invalid && form.get('name')?.touched ? 'nameError' : null" />
+        <div *ngIf="form.get('name')?.invalid && form.get('name')?.touched" class="role-alert" role="alert">
+          Name is required.
+        </div>
+      </div>
+  
+      <div>
+        <label for="email">Email</label>
+        <input id="email" formControlName="email" type="email" aria-required="true" 
+               [attr.aria-describedby]="form.get('email')?.invalid && form.get('email')?.touched ? 'emailError' : null" />
+        <div *ngIf="form.get('email')?.invalid && form.get('email')?.touched" class="role-alert" role="alert">
+          A valid email is required.
+        </div>
+      </div>
+  
+      <div>
+        <label for="message">Message</label>
+        <textarea id="message" formControlName="message" aria-required="true" 
+                  [attr.aria-describedby]="form.get('message')?.invalid && form.get('message')?.touched ? 'messageError' : null"></textarea>
+        <div *ngIf="form.get('message')?.invalid && form.get('message')?.touched" class="role-alert" role="alert">
+          Message is required.
+        </div>
+      </div>
+    </fieldset>
+  
+    <button type="submit" [disabled]="form.invalid">Submit</button>
+  
+    <!-- Success alert -->
+    <div *ngIf="successMessage" class="alert alert-success" role="alert">
+      {{ successMessage }}
+    </div>
+  </form>
+  

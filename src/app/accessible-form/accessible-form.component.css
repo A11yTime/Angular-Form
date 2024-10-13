@@ -1,0 +1,99 @@
+.form-title {
+    background-color: #007bff; /* Blue background */
+    padding: 1rem; /* Padding around the title */
+    text-align: center; /* Center the text */
+    color: white; /* White text for contrast */
+    margin-bottom: 1rem; /* Remove default margin */
+  }
+  
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    border: 1px solid #ccc; /* Light border for the form */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #f9f9f9; /* Light background color */
+  }
+  
+  fieldset {
+    
+    border: 0;
+  }
+  
+  legend {
+    font-weight: bold; /* Bold text for the legend */
+    font-size: 1.2em; /* Slightly larger font size */
+    color: #007bff; /* Blue color for the legend text */
+    padding: 0 10px; /* Padding around the legend */
+  }
+  
+  div {
+    margin-bottom: 15px; /* Space between form controls */
+  }
+  
+  label {
+    margin-bottom: 5px; /* Space between label and input */
+    display: block; /* Ensures labels are on a new line */
+  }
+  
+  input, textarea {
+    width: 100%; /* Full width for input and textarea */
+    padding: 10px; /* Padding inside inputs */
+    border: 1px solid #ccc; /* Light border for inputs */
+    border-radius: 4px; /* Slightly rounded corners */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+  }
+  
+  input:focus, textarea:focus {
+    border-color: #007bff; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+  }
+  
+  textarea {
+    resize: vertical; /* Allow vertical resizing only */
+    min-height: 100px; /* Minimum height for textarea */
+  }
+  
+  button {
+    padding: 10px; /* Padding for button */
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text color */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners for the button */
+    cursor: pointer; /* Change cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+  }
+  
+  button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  button:disabled {
+    background-color: #ccc; /* Gray background for disabled button */
+    cursor: not-allowed; /* Change cursor for disabled button */
+  }
+  
+  .role-alert {
+    color: #b22222; /* Bricks red color */
+    font-size: 0.9em; /* Smaller font size for alert */
+    margin-top: 5px; /* Space above alert messages */
+  }
+  
+  .alert {
+    padding: 10px 15px; /* Padding for the alert */
+    margin-top: 15px; /* Space above the alert */
+    border: 1px solid transparent; /* Border for the alert */
+    border-radius: 4px; /* Rounded corners */
+    background-color: #d4edda; /* Light green background */
+    color: #155724; /* Dark green text */
+    border-color: #c3e6cb; /* Light green border */
+  }
+  
+  .alert-success {
+    background-color: #c3e6cb; /* Light green for success */
+    color: #155724; /* Dark green for text */
+  }
+  
