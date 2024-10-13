@@ -1,27 +1,24 @@
-# AccessibleForm
+## Accessibility Considerations of Form and Validation 
+* Focus must be set to the error related field when error occur.
+* Error message must be programmatically determined with the associated field to describe user in text.
+* Form must have programmatically determiable label.
+* Label should be always visible.
+* Labels should be close proximity to their associated fields.
+* Label should be meaningful.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.8.
+## Terminologies: 
+`import { FormBuilder, FormGroup, Validators } from '@angular/forms';`
+* FormBuilder is a service provided by angular that makes it easier to create reactive form, instead of manually creating form controls and groups. It provides methods such as group(), control(), array() to create form structue more concisely.
+* Form group is a class that represents a group of form controls. Its a way to manage the state and validation of multiple form controls as a single unit. It defines the structue of your form. Each form control within the group can be independently validated and accessed.
+* Validators is a collection of built in validators provided by Angular to perform validation on form controls.
+* `  constructor(private fb: FormBuilder) {
+    this.form = this.fb.group({
+      name: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      message: ['', Validators.required],
+    });
+  } `
 
-## Development server
+  
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
